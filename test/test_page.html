@@ -118,11 +118,11 @@
 			Do old consent IN TIME
 		</button>
 
-		<h1>Constent via Cookiebot</h1>
+		<h1>Cookiebot Bridge</h1>
 		<script id="CookieDeclaration" src="https://consent.cookiebot.com/5bc36566-98cf-4295-bff3-ad9dcf69f4f5/cd.js" type="text/javascript" async></script>
 		<script>
-			const consent = Cookiebot.consent;
-			const localVendorFullData = jentis.consent.engine.getVendorFullData();
+			const consent = Cookiebot.consent; // current consent
+			const localVendorFullData = jentis.consent.engine.getVendorFullData(); // get all vendors' data
 
 			// Called when all or selected cookies are accepted
 			window.addEventListener('CookiebotOnAccept', function (e) {
